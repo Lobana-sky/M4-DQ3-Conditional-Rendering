@@ -22,17 +22,17 @@ handelClick = (selected)=>{
     have state? Which component should have methods to control state? Where should 
     these methods be called?
     */
-    const detailsToDisplay =(state)=> {
-      if(state==="profile"){
+    const detailsToDisplay =()=> {
+      if(this.state.select==="profile"){
         return(<Profile />)
       }
-      else if(state==="photos"){
+      else if(this.state.select==="photos"){
         return(<Photos />)
       }
-      else if(state==="cocktails"){
+      else if(this.state.select==="cocktails"){
         return(<Cocktails />)
       }
-      else if(state==="pokemon"){
+      else if(this.state.select==="pokemon"){
         return(<Pokemon />)
       }
     }
@@ -40,7 +40,7 @@ handelClick = (selected)=>{
     return (
       <div>
         <MenuBar whatSelect={this.state.select} handelClick={this.handelClick}/>
-        {detailsToDisplay(this.state.select)}
+        {detailsToDisplay}
       </div>
     )
   }
