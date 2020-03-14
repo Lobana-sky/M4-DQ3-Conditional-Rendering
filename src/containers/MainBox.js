@@ -26,10 +26,10 @@ handelClick = (selected)=>{
       if(this.state.select==="profile"){
         return(<Profile />)
       }
-      else if(this.state.select==="photos"){
+      else if(this.state.select==="photo"){
         return(<Photos />)
       }
-      else if(this.state.select==="cocktails"){
+      else if(this.state.select==="cocktail"){
         return(<Cocktails />)
       }
       else if(this.state.select==="pokemon"){
@@ -40,11 +40,9 @@ handelClick = (selected)=>{
     return (
       <div>
         <MenuBar whatSelect={this.state.select} handelClick={this.handelClick}/>
-        {detailsToDisplay}
+        {detailsToDisplay()}
       </div>
     )
   }
-
 }
-
 export default MainBox
